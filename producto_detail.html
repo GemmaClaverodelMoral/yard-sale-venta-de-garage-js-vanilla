@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --black:#000000;
+            --dark: #232830;
+            --very_light_pink: #c7c7c7;
+            --text_input_field: #f7f7f7;
+            --hospital_green: #acd9b2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+        p {
+            margin:0;
+        }
+        .product_card {
+            width: 400px;
+            position:absolute;
+            right: 0;
+        }
+        .img_container {
+            display:flex;
+            position: relative;
+            width: 100%;
+            height: 400px;
+        }
+        .icon_container {
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            position: absolute;
+            right: 12px;
+            top:12px;
+            z-index: 2;
+            background-color: var(--white);
+            width: 28px;
+            height: 28px;
+        }
+        .icon_container:hover {
+            cursor:pointer;
+        }
+        .icon_cancel {
+            width: 16px;
+            height: 16px;
+        }
+
+        .product_img {
+            width: 100%;
+            height: 400px;
+            position: absolute;
+            left: 0;
+            top:0;
+            border-radius: 0 0 20px 20px;
+            object-fit: cover;
+            margin-bottom: 40px;
+
+        }
+        .product_info {
+            margin: 0 20px 0;
+        }
+        .product_price {
+            font-size: var(--lg);
+            font-weight: bold;
+        }
+        .product_title {
+            font-size: var(--lg);
+            margin-top: 8px;
+        }
+        .product_description {
+            text-align: justify;
+            margin-top: 20px;
+            width: 100%;
+        }
+        
+        .primary_button {
+            background: var(--hospital_green);
+            border:none;
+            border-radius: 8px;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--lg);
+            font-weight: bold;
+            height: 60px;
+            margin-top: 40px;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .primary_button img {
+            margin-right: 10px;
+            height: 48px; /* Ajusta según necesites */
+        }
+        @media (max-width: 640px){  
+            .product_card {
+                width: 100%;
+            } 
+        }
+    </style>
+</head>
+<body>
+
+    <aside class="product_card">
+        <div class="img_container">
+            <div class="icon_container">
+                <img class="icon_cancel" src="./assets/icons/icon_close.png" alt="" />
+            </div>
+            <img class="product_img" src="./assets/images/bici.jpg" alt="bici" />
+        </div>
+        <div class="product_info">
+            <p   class="product_price">$120,00</p>
+            <p   class="product_title">Bike</p>
+            <p   class="product_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aliquam ut possimus laboriosam necessitatibus accusamus itaque beatae reiciendis harum nobis excepturi saepe non qui, esse voluptatum ratione totam assumenda eos!</p>
+            <button type="submit" class="primary_button add_to_cart_button">
+                <img src="./assets/icons/bt_add_to_cart.svg" alt="Carrito">
+                Add to cart
+            </button>
+        </div>
+    </aside>
+</body>
+</html>

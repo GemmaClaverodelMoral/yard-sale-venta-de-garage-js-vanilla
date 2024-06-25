@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --black:#000000;
+            --dark: #232830;
+            --very_light_pink: #c7c7c7;
+            --text_input_field: #f7f7f7;
+            --hospital_green: #acd9b2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .mobile_menu {
+            padding: 24px;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+        }
+
+        .mobile_menu ul {
+            list-style: none;
+            margin: 24px 0 0;
+            padding: 0;
+        }
+        .mobile_menu ul:nth-child(1) {
+            border-bottom: 1px solid var(--very_light_pink)
+        }
+        .mobile_menu ul li {
+           margin-bottom: 24px;
+        }
+        .email {
+            margin-bottom: 0px !important;
+         }
+         .sign_out {
+            margin-bottom: 40px !important;
+         }
+        .mobile_menu a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: bold;
+        }
+      
+        .email a {
+            font-size: var(--sm);
+            font-weight: 300 !important;
+        }
+        .sign_out a {
+            font-size: var(--sm);
+            color: var(--hospital_green) !important;
+            margin-bottom: 40px !important;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="mobile_menu">
+        <div>
+            <ul>
+                <li>
+                    <a href="/">CATEGORIES</a>
+                </li>
+                <li>
+                    <a href="/">All</a>
+                </li>
+                <li>
+                    <a href="/">Clothes</a>
+                </li>
+                <li>
+                    <a href="/">Electronics</a>
+                </li>
+                <li>
+                    <a href="/">Toys</a>
+                </li>
+                <li>
+                    <a href="/">Others</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="/">My orders</a>
+                </li>
+                <li>
+                    <a href="/">My account</a>
+                </li>
+            </ul>
+        </div>
+        <ul>
+            <li class="email">
+                <a href="/">camilayokoo@gmail.com</a>
+            </li>
+            <li class="sigh_out">
+                <a href="/">Sign out</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

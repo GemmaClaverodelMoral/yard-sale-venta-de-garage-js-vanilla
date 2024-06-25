@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --black:#000000;
+            --dark: #232830;
+            --very_light_pink: #c7c7c7;
+            --text_input_field: #f7f7f7;
+            --hospital_green: #acd9b2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        p {
+            margin:0;
+            padding:0;
+        }
+        .shopping_cart {
+            width: 360px;
+            padding: 24px;
+            box-sizing: border-box;
+            position: absolute;
+            right: 0;
+            top:0;
+        }
+        .title_container {
+            display: flex;
+        }
+        .title_container img{
+            transform: rotate(180deg);
+            cursor:pointer;
+            margin-right: 14px;
+        }
+        .title {
+            color: var(--dark);
+            font-size: var(--lg);
+            font-weight: bold;
+        }
+
+        .cards_container {
+            display: grid;
+            grid-template-columns: 1fr, 100%;
+        }
+        .product_card {
+            width:100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .product_card_left {
+            display:flex;
+            align-items: center;
+        }
+        .product_card_left p {
+            font-size: var(--md);
+            color: var(--very_light_pink);
+            font-weight: 300;
+        }
+        .product_card_right {
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100px;
+        }
+        .product_card_right img {
+            width: 16px;
+            height: 16px;
+            cursor:pointer;
+        }
+        .product_card_left img {
+            width: 140px;
+            height: 140px;
+            border-radius: 20px;
+            object-fit: cover;
+            margin: 20px 20px 20px 0;
+        }
+        .total_container {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--text_input_field);
+            padding: 20px;
+            border-radius: 10px;
+            box-sizing: border-box;
+            margin: 24px 0
+        }
+        .total_left {
+            display: flex;
+            flex-direction:column;
+            justify-content: space-between;
+            height: 50px;
+        }
+        .total_left p:nth-child(1) {
+            font-size: var(--lg);
+            color: var(--dark);
+            font-weight: bold;
+        }
+        .total_left p:nth-child(2) {
+            font-size: var(--lg);
+            color: var(--very_light_pink);
+            font-weight: 300;
+        }
+        .total_container p {
+            color: var(--dark);
+            font-size: var(--lg);
+            font-weight: bold;
+        }
+        .primary_button {
+            background: var(--hospital_green);
+            border:none;
+            border-radius: 8px;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--lg);
+            font-weight: bold;
+            height: 60px;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @media (max-width: 640px){
+            .shopping_cart {
+                width: 100%;;
+            }
+            .title_container {
+                display:none;
+            }
+            .product_card_left img {
+                width: 100px;
+                height: 100px;
+             }
+             .product_card p {
+                padding-right: 20px;
+                box-sizing: border-box;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="shopping_cart">
+        <div class="title_container">
+            <img src="./assets/icons/flechita.svg" alt="" />
+            <p class="title">Shopping cart</p>
+        </div>
+        
+        <div class="cards_container">
+
+            <div class="product_card">
+                <div class="product_card_left">
+                    <img src="./assets/images/bici.jpg" alt="" />
+                    <p>Bici</p>
+                </div>
+                <div class="product_card_right">
+                    <p>$120,00</p>
+                    <img src="./assets/icons/icon_close.png" alt="close" />
+                </div>
+            </div>
+            <div class="product_card">
+                <div class="product_card_left">
+                    <img src="./assets/images/bici.jpg" alt="" />
+                    <p>Bici</p>
+                </div>
+                <div class="product_card_right">
+                    <p>$120,00</p>
+                    <img src="./assets/icons/icon_close.png" alt="close" />
+                </div>
+            </div>
+            <div class="product_card">
+                <div class="product_card_left">
+                    <img src="./assets/images/bici.jpg" alt="" />
+                    <p>Bici</p>
+                </div>
+                <div class="product_card_right">
+                    <p>$120,00</p>
+                    <img src="./assets/icons/icon_close.png" alt="close" />
+                </div>
+            </div>
+            <div class="product_card">
+                <div class="product_card_left">
+                    <img src="./assets/images/bici.jpg" alt="" />
+                    <p>Bici</p>
+                </div>
+                <div class="product_card_right">
+                    <p>$120,00</p>
+                    <img src="./assets/icons/icon_close.png" alt="close" />
+                </div>
+            </div>
+                       <div class="product_card">
+                <div class="product_card_left">
+                    <img src="./assets/images/bici.jpg" alt="" />
+                    <p>Bici</p>
+                </div>
+                <div class="product_card_right">
+                    <p>$120,00</p>
+                    <img src="./assets/icons/icon_close.png" alt="close" />
+                </div>
+            </div>
+
+        </div>
+
+        <div class="total_container">
+            <p>Total</p>
+            <p>$ 560,00</p>
+        </div>
+
+        <button type="submit" class="primary_button checkout_cart_button">
+            Checkout
+        </button>
+    </section>
+</body>
+</html>
