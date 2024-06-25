@@ -1,12 +1,15 @@
 # yard-sale-venta-de-garage
 Proyecto HTML y CSS donde se pasaron todos los diseños del área de Diseño a pantallas HTML con CSS 
-## La idea es que yo misma le hago FORK a este repositorio para hacer DOS aportes:
-### PASO 1: 1er aporte 
-* Se desarrolla aporte con codigo JS Vanilla.
-### PASO 2: 2do aporte
-* Se desarrolla aporte con codigo JS React.
+## Maquetacion basica de HTML y CSS sin JS 
 
-#### De esta forma se practican 3 cosas: 
+### PASO 1: 1er aporte 
+* Se desarrolla aporte con codigo JS Vanilla. Repositorio: yard-sale-venta-de-garage-JS-vanilla
+
+### PASO 2: 2do aporte
+* Se desarrolla aporte con codigo JS React. Repositorio: yard-sale-venta-de-garage-JS-React
+
+#### De esta forma se practican 2 cosas: 
 1.  Se aprende JS Vanilla
 2.  Se revelan las mejoras con componentes de React.
-3.  Se aprende a hacer aportes FORK a proyectos colaborativos, agenos...
+   (tambien queria practicar con FORK pero no le puedo hacer fork a mi propio proyecto
+
