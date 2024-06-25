@@ -18,8 +18,10 @@ Proyecto HTML y CSS donde se pasaron todos los diseños del área de Diseño a p
 * Se usa main.js para escuchar el click del correo y asi renderizar el <div> que contiene el desktopMenu al cual le hemos puesto una clase inactive asiciada a su display (none vs. block) con la que vamos ha hacer toggle/iterar en cada click del email. Se le adiciona el atributo cursor:pointer al email para que salga la manito.
 
 ## Subida del proyecto en ramas.
-* Creacion de rama para cada avance
+* Creacion de rama para cada avance: avanceX
 * <git checkout -b avance1>
 * Se adicionan todos los archivos al proximo commit
 * <git add .>
 * <git commit -m "Primer avance del proyecto: NavBar + desktopMenu">
+* Se suben los archivos a la nueva rama avanceX. En este caso avance1
+* <git push -u origin avance1>
