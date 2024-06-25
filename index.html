@@ -6,36 +6,60 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-    <title>YARD Sale</title>
-    <style>
-        .quicksand_light {
-          font-family: "Quicksand", sans-serif;
-          font-optical-sizing: auto;
-          font-weight: 300;
-          font-style: normal;
-        }
-        .quicksand_regular {
-            font-family: "Quicksand", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 500;
-            font-style: normal;
-          }
-        .quicksand_bold {
-          font-family: "Quicksand", sans-serif;
-          font-optical-sizing: auto;
-          font-weight: 700;
-          font-style: normal;
-        }
-        :root {
-            --white: #FFFFFF;
-            --very_light_pink: #c7c7c7;
-            ---text_input_field: #f7f7f7;
-            --hospital_green: #acd9b2;
-            --dark: #232830;
-        }
-    </style>
+    <link rel="stylesheet" href="./styles.css">
+    <title>YardSale: Venta de Garage</title>
 </head>
 <body>
-    
+    <nav class="nav">
+        <img class="nav_menu_vertical"  src="./assets/icons/icon_menu.svg"         alt="icon_menu" />
+        <div class="navbar navb_left">
+            <img class="nav_yard_sale_logo" src="./assets/logos/logo_yard_sale.svg" alt="favicon_yard_sale" />
+            <div class="menu_horizontal">
+                <ul>
+                    <li>
+                        <a href="/">All</a>
+                    </li>
+                    <li>
+                        <a href="/">Clothes</a>
+                    </li>
+                    <li>
+                        <a href="/">Electronics</a>
+                    </li>
+                    <li>
+                        <a href="/">Furnitures</a>
+                    </li>
+                    <li>
+                        <a href="/">Toys</a>
+                    </li>
+                    <li>
+                        <a href="/">Others</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar navb_rigth">
+            <ul>
+                <li class="navb_email">camilayokoo@gmail.com</li>
+                <li class="navb_cart">
+                    <img src="./assets/icons/icon_shopping_cart_notification.svg" alt="cart_resume" />
+                    <span>2</span>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="desktop_menu inactive">
+      <ul>
+          <li>
+              <a class="li_child_t1" href="/">My orders</a>
+          </li>
+          <li>
+              <a class="li_child_t1" href="/">My account</a>
+          </li>
+          <li>
+              <a class="li_child_t2" href="/">Sign out</a>
+          </li>
+      </ul>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>

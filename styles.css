@@ -1,0 +1,136 @@
+:root {
+    --white: #FFFFFF;
+    --black:#000000;
+    --dark: #232830;
+    --very_light_pink: #c7c7c7;
+    --text_input_field: #f7f7f7;
+    --hospital_green: #acd9b2;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+}
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+.inactive {
+    display: none;
+}
+p {
+    margin:0;
+    padding:0;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    height: 60px; 
+    border-bottom: 1px solid var(--very_light_pink);
+}
+.navbar {
+    display: flex;
+
+}
+.navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:0;
+    padding:0;
+}
+.navbar ul li {
+    list-style: none;
+    margin:0 8px;
+    padding: 0;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: var(--very_light_pink);
+    border: 1px solid var(--white);
+    padding: 8px;
+    border-radius: 8px;
+}
+.menu_horizontal {
+    margin-left: 12px;
+}
+.navb_left ul li a:hover {
+    border: 1px solid var(--hospital_green);
+    border-radius: 8px;
+    padding: 8px;
+}
+.nav_menu_vertical {
+    display: none;
+}
+.nav_yard_sale_logo {
+    width: 100px;
+}
+.navb_email {
+    color: var(--very_light_pink);
+    cursor: pointer;
+}
+.navb_cart {
+    display: flex;
+    position: relative;
+}
+.navb_cart span {
+    position: absolute;
+    right: 7px;
+    top:0;
+    font-size: var(--sm);
+    font-weight: bold;
+}
+.navb_cart img {
+    width: 48px;
+}
+.desktop_menu {
+    position:absolute;
+    right: 8px;
+    top: 60px;
+    width: 100px;
+    height: auto;
+    border: 1px solid var(--very_light_pink);
+    border-radius: 0px 0px 6px 6px;
+    padding: 20px 20px 0px 20px;
+}
+.desktop_menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.desktop_menu ul li {
+    text-align: end;
+}
+.desktop_menu ul li a {
+    display: inline-block; /*para que tome el margin*/
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+.desktop_menu ul li:nth-child(1),
+.desktop_menu ul li:nth-child(2) {
+    font-weight: bold;
+    color: var(--dark)
+}
+.desktop_menu ul li:last-child {
+    padding-top: 20px;
+    border-top: 1px solid var(--very_light_pink);    
+}
+.li_child_t1 {
+    color: var(--dark);
+}
+.li_child_t2 {
+    color: var(--hospital_green);
+    font-weight: bold;
+    font-size: var(--sm);
+}
+@media (max-width: 640px){
+    .nav_menu_vertical {
+        display: block;
+    }
+    .navb_email {
+        display: none;
+    }
+    .menu_horizontal {
+        display: none;
+    }
+}   
