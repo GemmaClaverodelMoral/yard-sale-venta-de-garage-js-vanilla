@@ -25,3 +25,6 @@ Proyecto HTML y CSS donde se pasaron todos los diseños del área de Diseño a p
 * <git commit -m "Primer avance del proyecto: NavBar + desktopMenu">
 * Se suben los archivos a la nueva rama avanceX. En este caso avance1
 * <git push -u origin avance1>
+
+## Como alternar entre menus horizontales y verticales segun el tamaño de pantalla
+* Se debe de jugar con display: none, se deben de hacer mediaquerys
