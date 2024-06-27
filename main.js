@@ -1,15 +1,15 @@
-
-const navbEmail         = document.querySelector(".navb_email")
-const navMenuVertical   = document.querySelector(".nav_menu_vertical")
-const desktopMenu       = document.querySelector(".desktop_menu")
-const mobileMenu        = document.querySelector(".mobile_menu")
-const shoppingCart      = document.querySelector(".shopping_cart")
-const navbCart          = document.querySelector(".navb_cart")
-const titleContainerImg = document.querySelector(".title_container_img")
-const cardsContainer    = document.querySelector('.cards_container')
-const productDetailCard = document.querySelector('.product_detail_card')
-const iconContainer     = document.querySelector('.icon_container')
-
+const navMenuVertical          = document.querySelector(".nav_menu_vertical")
+const desktopUserMenu          = document.querySelector(".desktop_menu")
+const navbEmail                = document.querySelector(".navb_email")
+const mobileMenu               = document.querySelector(".mobile_menu")
+const shoppingCart             = document.querySelector(".shopping_cart")
+const navbCart                 = document.querySelector(".navb_cart")
+const titleContainerImg        = document.querySelector(".title_container_img")
+const cardsContainer           = document.querySelector('.cards_container')
+const productDetailCard        = document.querySelector('.product_detail_card')
+const closeDetailCardIcon     = document.querySelector('.cancel_detail_view_icon')
+const myOrdersContainer        = document.querySelector('.my_orders_main_container')
+const userEmailMenu            = document.querySelector('.li_child_t1')
 
 const productList = []
 productList.push(
@@ -30,46 +30,66 @@ productList.push(
     }
 )
 
-navbEmail.addEventListener('click',         toggleDesktopMenu)
+/* RENDER Lista de productos */
+document.addEventListener('DOMContentLoaded', (event) => renderProducts(productList)); 
+
+/* ESCUCHAS del DOM */
+navbEmail.addEventListener('click',         toggledesktopUserMenu)
 navMenuVertical.addEventListener('click',   toggleMobileMenu)
 navbCart.addEventListener('click',          toggleCart)
+//userEmailMenu.addEventListener('click',     toggleMyOrders)
 titleContainerImg.addEventListener('click', toggleCart)
-// productCard.addEventListener('click',       toggleDetailCard)
-iconContainer.addEventListener('click', toggleDetailCard)
-document.addEventListener('DOMContentLoaded', (event) => renderProducts(productList));
+closeDetailCardIcon.addEventListener('click', closeDetailCard)
 
-function toggleDesktopMenu() { // Muestra o Oculta el Menu de escritorio
-
+function toggledesktopUserMenu() { // Muestra o Oculta el Menu de escritorio
+    console.log('toggledesktopUserMen')
     mobileMenu.classList.add('inactive')
     shoppingCart.classList.add('inactive')
-    productDetailCard.classList.add('inactive');
-    desktopMenu.classList.toggle('inactive');
-} 
-function toggleMobileMenu() { // Muestra o Oculta el Menu de Mobile
+    productDetailCard.classList.add('inactive')
+    myOrdersContainer.classList.add('inactive')
 
+    desktopUserMenu.classList.toggle('inactive');
+} 
+
+function toggleMyOrders() { // Muestra o Oculta mis Ordenes
+    console.log('toggleMyOrders')
+    mobileMenu.classList.add('inactive')
     shoppingCart.classList.add('inactive')
-    desktopMenu.classList.add('inactive')
-    productDetailCard.classList.add('inactive');
+    productDetailCard.classList.add('inactive')
+    desktopUserMenu.classList.add('inactive')
+
+    myOrdersContainer.classList.toggle('inactive')
+} 
+
+function toggleMobileMenu() { // Muestra o Oculta el Menu de Mobile
+    console.log('toggleMobileMenu')
+    shoppingCart.classList.add('inactive')
+    desktopUserMenu.classList.add('inactive')
+    productDetailCard.classList.add('inactive')
+    myOrdersContainer.classList.add('inactive')
+
     mobileMenu.classList.toggle('inactive');
 } 
 function toggleCart() { // Muestra o Oculta el Carrito de Compras
+    console.log('toggleCart')
     mobileMenu.classList.add('inactive')
-    desktopMenu.classList.add('inactive')
-    shoppingCart.classList.toggle('inactive');
+    desktopUserMenu.classList.add('inactive')
+    productDetailCard.classList.add('inactive')
+    myOrdersContainer.classList.add('inactive')
+
+    shoppingCart.classList.toggle('inactive')
 } 
-function toggleDetailCard() { // Muestra o Oculta el Detalle del Producto
-    mobileMenu.classList.add('inactive')
-    desktopMenu.classList.add('inactive')
-    shoppingCart.classList.add('inactive')
-    productDetailCard.classList.toggle('inactive');
+function closeDetailCard() { // Oculta el Detalle del Producto
+    console.log('closeDetailCard')
+    productDetailCard.classList.add('inactive');
 } 
-function openProductDetail(producto) {
+function openDetailCard() {
+    console.log('openDetailCard')
     mobileMenu.classList.add('inactive')
-    desktopMenu.classList.add('inactive')
+    desktopUserMenu.classList.add('inactive')
     shoppingCart.classList.add('inactive')
-    // productDetailCard.img = producto.image
-    // productDetailCard.name = producto.name
-    // productDetailCard.price = producto.price
+    myOrdersContainer.classList.add('inactive')
+
     productDetailCard.classList.remove('inactive')
 }
 function renderProducts(arr){ // Recorre la base de datos de productos y los plasma en la pantalla
@@ -82,7 +102,6 @@ function renderProducts(arr){ // Recorre la base de datos de productos y los pla
         productImage.src = product.image;
         productImage.alt = product.name;
         productCard.appendChild(productImage);              //   />
-        productImage.addEventListener('click', openProductDetail)
         const productInfo = document.createElement('div');  //   <div class="product_info">
         productInfo.classList.add('product_info');
         const productText = document.createElement('div');  //     <div>
@@ -101,7 +120,7 @@ function renderProducts(arr){ // Recorre la base de datos de productos y los pla
         productInfo.appendChild(productFigure);             //      </figure>
         productCard.appendChild(productInfo);               //   </div>
         cardsContainer.appendChild(productCard);            // </div>
-        productImage.addEventListener('click', openProductDetail(product))
+        productImage.addEventListener('click', openDetailCard)
         
     }
 }

@@ -39,6 +39,9 @@ Proyecto HTML y CSS donde se pasaron todos los diseños del área de Diseño a p
 ## Avance 4: solucionar 2 elementos con nombres de clases iguales
 * Todas las clases que eran iguales, les puse prefijo detail_
 
-## Avance 5_ Al hacer click en una imagen de producto, abre el aside lateral del detalle del producto
+## Avance 5: Al hacer click en una imagen de producto, abre el aside lateral del detalle del producto
 * Se pone una escucha dentro del bucle.
 * Se deberian ver los datos del producto en particular pero no esta hecha la implementacion.
+
+## Avance 6: Deploy a github
+* 
