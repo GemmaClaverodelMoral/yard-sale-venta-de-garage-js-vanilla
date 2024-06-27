@@ -6,7 +6,10 @@ const mobileMenu        = document.querySelector(".mobile_menu")
 const shoppingCart      = document.querySelector(".shopping_cart")
 const navbCart          = document.querySelector(".navb_cart")
 const titleContainerImg = document.querySelector(".title_container_img")
-const cardsContainer    = document.querySelector('.cards_container');
+const cardsContainer    = document.querySelector('.cards_container')
+const productDetailCard = document.querySelector('.product_detail_card')
+const iconContainer     = document.querySelector('.icon_container')
+
 
 const productList = []
 productList.push(
@@ -27,29 +30,38 @@ productList.push(
     }
 )
 
-navbEmail.addEventListener('click', toggleDesktopMenu)
+navbEmail.addEventListener('click',         toggleDesktopMenu)
 navMenuVertical.addEventListener('click',   toggleMobileMenu)
 navbCart.addEventListener('click',          toggleCart)
 titleContainerImg.addEventListener('click', toggleCart)
+// productCard.addEventListener('click',       toggleDetailCard)
+iconContainer.addEventListener('click', toggleDetailCard)
 document.addEventListener('DOMContentLoaded', (event) => renderProducts(productList));
 
 function toggleDesktopMenu() { // Muestra o Oculta el Menu de escritorio
 
     mobileMenu.classList.add('inactive')
     shoppingCart.classList.add('inactive')
+    productDetailCard.classList.add('inactive');
     desktopMenu.classList.toggle('inactive');
 } 
 function toggleMobileMenu() { // Muestra o Oculta el Menu de Mobile
 
     shoppingCart.classList.add('inactive')
     desktopMenu.classList.add('inactive')
+    productDetailCard.classList.add('inactive');
     mobileMenu.classList.toggle('inactive');
 } 
 function toggleCart() { // Muestra o Oculta el Carrito de Compras
-
     mobileMenu.classList.add('inactive')
     desktopMenu.classList.add('inactive')
     shoppingCart.classList.toggle('inactive');
+} 
+function toggleDetailCard() { // Muestra o Oculta el Detalle del Producto
+    mobileMenu.classList.add('inactive')
+    desktopMenu.classList.add('inactive')
+    shoppingCart.classList.add('inactive')
+    productDetailCard.classList.toggle('inactive');
 } 
 function renderProducts(arr){ // Recorre la base de datos de productos y los plasma en la pantalla
     for (product of arr) {
