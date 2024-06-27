@@ -22,7 +22,7 @@ Proyecto HTML y CSS donde se pasaron todos los diseños del área de Diseño a p
 * <git checkout -b avance1
 * Se adicionan todos los archivos al proximo commit
 * <git add .
-* <git commit -m "Primer avance del proyecto: NavBar + desktopMenu">
+* <git commit -m "Primer avance del proyecto: NavBar + desktopMenu"
 * Se suben los archivos a la nueva rama avanceX. En este caso avance1
 * <git push -u origin avance1
 
@@ -35,3 +35,10 @@ Proyecto HTML y CSS donde se pasaron todos los diseños del área de Diseño a p
 * Se crea un areglo vacio al que se le hace push de 1 elemento con nombre, precio y URL de la imagen
 * Usamos el ciclo (for product in productList) para mayor comodidad de iterancia en el areglo
 * Maquetamos todas las etiquetas del product Card con instrucciones de createElement y appendChild de JS 
+
+## Avance 4: solucionar 2 elementos con nombres de clases iguales
+* Todas las clases que eran iguales, les puse prefijo detail_
+
+## Avance 5_ Al hacer click en una imagen de producto, abre el aside lateral del detalle del producto
+* Se pone una escucha dentro del bucle.
+* Se deberian ver los datos del producto en particular pero no esta hecha la implementacion.

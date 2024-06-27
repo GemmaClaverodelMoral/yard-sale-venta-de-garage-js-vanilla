@@ -63,6 +63,15 @@ function toggleDetailCard() { // Muestra o Oculta el Detalle del Producto
     shoppingCart.classList.add('inactive')
     productDetailCard.classList.toggle('inactive');
 } 
+function openProductDetail(producto) {
+    mobileMenu.classList.add('inactive')
+    desktopMenu.classList.add('inactive')
+    shoppingCart.classList.add('inactive')
+    // productDetailCard.img = producto.image
+    // productDetailCard.name = producto.name
+    // productDetailCard.price = producto.price
+    productDetailCard.classList.remove('inactive')
+}
 function renderProducts(arr){ // Recorre la base de datos de productos y los plasma en la pantalla
     for (product of arr) {
         
@@ -73,6 +82,7 @@ function renderProducts(arr){ // Recorre la base de datos de productos y los pla
         productImage.src = product.image;
         productImage.alt = product.name;
         productCard.appendChild(productImage);              //   />
+        productImage.addEventListener('click', openProductDetail)
         const productInfo = document.createElement('div');  //   <div class="product_info">
         productInfo.classList.add('product_info');
         const productText = document.createElement('div');  //     <div>
@@ -91,6 +101,8 @@ function renderProducts(arr){ // Recorre la base de datos de productos y los pla
         productInfo.appendChild(productFigure);             //      </figure>
         productCard.appendChild(productInfo);               //   </div>
         cardsContainer.appendChild(productCard);            // </div>
+        productImage.addEventListener('click', openProductDetail(product))
+        
     }
 }
 
