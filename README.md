@@ -28,3 +28,10 @@ Proyecto HTML y CSS donde se pasaron todos los diseños del área de Diseño a p
 
 ## Como alternar entre menus horizontales y verticales segun el tamaño de pantalla
 * Se debe de jugar con display: none, se deben de hacer mediaquerys
+
+## Avance 3: Hacer que aparezca y desaparezca el carrito de la compra con el logo del carrito
+* Se eliminan todos los elementos de targetas de producto duplicadas de la importancion que hacemos del archivo order.html
+* Se crean los elementos en main.JS (con eso queda lista para cuando se importen de una API REST)
+* Se crea un areglo vacio al que se le hace push de 1 elemento con nombre, precio y URL de la imagen
+* Usamos el ciclo (for product in productList) para mayor comodidad de iterancia en el areglo
+* Maquetamos todas las etiquetas del product Card con instrucciones de createElement y appendChild de JS 
